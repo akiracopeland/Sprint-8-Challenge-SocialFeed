@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SeedData {
-    private static final UserRepository userRepository = new UserRepository();
+    private static UserRepository userRepository = new UserRepository();
 
     public static void run() {
         File userDataFile = new File(App.USER_FILE_PATH);

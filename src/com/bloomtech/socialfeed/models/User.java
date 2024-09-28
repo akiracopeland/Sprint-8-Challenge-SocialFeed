@@ -19,6 +19,7 @@ public class User {
     public User() {
         following = new ArrayList<>();
         userFeed = new OUserFeed(this);
+        App.sourceFeed.attach(this.userFeed);
     }
 
     public String getUsername() {
@@ -80,6 +81,6 @@ public class User {
     }
 
     public void follow(String usernameToFollow) {
-        following.add(usernameToFollow);
+        this.following.add(usernameToFollow);
     }
 }

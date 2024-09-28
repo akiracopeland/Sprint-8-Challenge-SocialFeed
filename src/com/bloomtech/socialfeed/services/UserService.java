@@ -1,5 +1,6 @@
 package com.bloomtech.socialfeed.services;
 
+import com.bloomtech.socialfeed.App;
 import com.bloomtech.socialfeed.exceptions.UserValidationException;
 import com.bloomtech.socialfeed.models.User;
 import com.bloomtech.socialfeed.repositories.UserRepository;
@@ -7,7 +8,7 @@ import com.bloomtech.socialfeed.validators.EmailValidator;
 import com.bloomtech.socialfeed.validators.UserInfoValidator;
 
 public class UserService {
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
     private static final UserInfoValidator userInfoValidator = new UserInfoValidator();
     private static final EmailValidator emailValidator = new EmailValidator();
 

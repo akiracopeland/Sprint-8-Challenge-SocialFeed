@@ -1,6 +1,8 @@
 package com.bloomtech.socialfeed;
 
 import com.bloomtech.socialfeed.observerpattern.SourceFeed;
+import com.bloomtech.socialfeed.repositories.UserRepository;
+
 
 public class App {
     public static final SourceFeed sourceFeed = new SourceFeed();

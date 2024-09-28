@@ -7,11 +7,9 @@ public class EmailValidator implements Validator {
     }
 
     private boolean isValidEmail(String email) {
-        /*TODO: Validate that email begins with a letter or number, contains only letters, numbers, "." and "_", and
-        *that it follows the pattern of name@domain.identifier
-        */
+        String regex = "^[a-zA-Z0-9_.]+@[a-zA-Z]+\\.[a-zA-Z]+$";
 
-        return true;
+        return email.matches(regex);
     }
 
     @Override
