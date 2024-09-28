@@ -36,24 +36,6 @@ public class SourceFeed implements Source {
                 body);
         this.posts = postRepository.addPost(post);
 
-//        if (!userRepository.getAllUsers().contains(user)) {
-//            userService.save(user);
-//        }
-
-        List<String> followerNames = user.getFollowing();
-
-        List<User> followers = new ArrayList<>();
-
-        for (String followerName : followerNames) {
-            followers.add(userService.getUserByUsername(followerName));
-        }
-
-        for (User follower : followers) {
-            OUserFeed userFeed = new OUserFeed(follower);
-
-            this.attach(userFeed);
-        }
-
         this.updateAll();
 
         return post;
